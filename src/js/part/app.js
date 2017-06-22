@@ -430,16 +430,31 @@ $(document).ready(function() {
             }
         });
 
+        setTimeout(function() {
+            $('.swiper-slide').magnificPopup({
+                type: 'image',
+                closeOnContentClick: true,
+                image: {
+                    verticalFit: false
+                },
+                zoom: {
+                    enabled: true,
+                    duration: 300 // don't foget to change the duration also in CSS
+                }
+            });
+
+            $('.owl-height').height( $('.owl-item.active').height() );
+            
+        }, 100);
 
 
         $('.place-one__close, .news-one__close').on('click',function() {
-
             $('.place-overlay').fadeOut();
             $('body').removeClass('no-scroll');
         });
     });
+       
 
-    
     
 
     $('.news-one').on('click', function(event) {
