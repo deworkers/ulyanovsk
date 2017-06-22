@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>main page</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic-ext" rel="stylesheet">
+
+
+    <!-- Плагины -->
+    <link rel="stylesheet" href="/plugin/owl.carousel/owl.carousel.css">
+    <script type="text/javascript" src="/plugin/owl.carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="/plugin/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="/plugin/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="/plugin/jquery.carouFredSel.packed.js"></script>
+
+
+</head>
+<body>
+    //= template/side.html
+
+    <section class="content">
+        <div class="head">
+            <div class="hide-menu"></div>
+            <div class="search search--inner">
+                <form action="">
+                    <input class="search__input" type="text" placeholder="поиск по сайту">
+                    <button class="search__button"></button>
+                </form>
+                <a href="#" class="presetnation">Скачать презентации</a>
+            </div>
+            <div class="head__title">выбор площадки</div>
+        </div>
+            <a href="#" class="head-pochemu">
+                <div class="head-pochemu__icon"></div>
+                <div class="head-pochemu__top">Лучший регион</div>
+                <div class="head-pochemu__center">для инвестирования</div>
+                <div class="head-pochemu__bottom">узнать почему?</div>
+            </a>
+        //= template/place-list.html
+        <a href="/place.html" class="place-select">           
+            <div class="place-select__text">изменить режим просмотра</div>
+            <div class="place-select__arrow"></div>
+        </a>
+    </section>
+    //= template/modal.html
+</body>
+</html>

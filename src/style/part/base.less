@@ -1,0 +1,118 @@
+//переменные
+@font: 'Open Sans', serif;
+
+@color_white: #fff;
+@color_text: #222;
+@color_link: #0073b4;
+
+
+
+.grad-v(@color_grad2: #0088a2, @color_grad2: #00a0cd) {
+    background: #00a0cd;
+    background: -moz-linear-gradient(top, @color_grad2 0%, @color_grad1 100%);
+    background: -webkit-linear-gradient(top, @color_grad2 0%, @color_grad1 100%);
+    background: linear-gradient(to bottom, @color_grad2 0%, @color_grad1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color_grad2', endColorstr='@color_grad1',GradientType=0 );
+
+}
+
+.grad-h(@color_grad2: #0088a2, @color_grad2: #00a0cd) {
+    background: @color_grad1;
+    background: -moz-linear-gradient(left,  @color_grad1 0%, @color_grad2 100%);
+    background: -webkit-linear-gradient(left,  @color_grad1 0%,@color_grad2 100%);
+    background: linear-gradient(to right,  @color_grad1 0%,@color_grad2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color_grad1', endColorstr='@color_grad2',GradientType=1 );
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    word-spacing: normal;
+}
+
+div {
+    position: relative;
+}
+
+html { 
+    height: 100%; 
+    width: 100%; 
+}
+
+body {
+    width: 100%; 
+    height: 100%;
+    font-family: @font;
+    margin: 0;
+    padding: 0;
+    background: @color_white;
+    color: @color_text;
+}
+
+img {
+    border: none;
+}
+
+p {
+    font-size: 13px;
+    margin: 0 0 15px 0;
+    line-height: 20px;
+}
+
+a {
+    color: @color_link;
+    outline: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.head (@font-size, @margin-bottom, @line-height: normal, @color) {
+    font-size: @font-size;
+    margin: 0 0 @margin-bottom 0;
+    line-height: @line-height;
+    color: @color;
+}
+
+h1 {
+    .head(25px, 30px, normal, @color_text);
+}
+
+h2 {
+    .head(22px, 25px, normal, @color_text);
+}
+
+h3 {
+    .head(18px, 20px, normal, @color_text);
+}
+
+h4 {
+    .head(16px, 15px, normal, @color_text);
+}
+
+h5 {
+    .head(13px, 15px, normal, @color_text);
+    font-weight: 700;
+}
+
+
+table{
+    border-collapse:collapse;
+}
+
+td{
+
+}
+
+ul, ol{
+    margin:0 0 25px 0px; 
+    padding: 0 0 0 0px;
+}
+ul li, ol li{
+    font-size: 13px;
+    margin-bottom:5px;
+    margin-left: 20px;
+}

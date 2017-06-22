@@ -1,0 +1,72 @@
+<script type="text/javascript">
+    ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+                center: [54.32846455788249,48.40878832411194],
+                zoom: 16,
+                controls: []
+            }, {
+            }),
+         
+
+            myPlacemark = new ymaps.Placemark([
+                54.32846455788249,48.40878832411194
+            ], {
+                iconCaption: 'ул. Рылеева, 41'
+            }, {
+                preset: 'islands#blueCircleDotIconWithCaption',
+                iconCaptionMaxWidth: '240'
+            });
+
+        myMap.geoObjects.add(myPlacemark);
+    });
+</script>
+<div class="contact">
+    <div class="contact-top">
+        <div class="contact-top__title">АО "Корпорация развития Ульяновской области"</div>
+        <div class="contact-top__text">
+            432071, г. Ульяновск, ул. Рылеева, д. 41<br>
+            + 7 (499) 346-73-03, 73-70-01 <br>
+            info@ulregion.com
+        </div>
+        <a class="contact-top__l" href="#">Реквизиты<br>организации</a>
+        <a class="contact-top__r" href="#">контакты наших<br>резидентов</a>
+    </div>
+    <div class="contact-block clearfix">
+            <div class="contact-block-left">
+                <div class="contact-block__name">Игорь Владимирович Рябиков</div>
+                <div class="contact-block__text">Директор департамента продвижения региона
+                АО «Корпорация развития Ульяновской области»</div>
+                <div class="contact-block__phone">+7 (8422)<span> 741-15-67</span></div>
+                <div class="contact-block__phone">+7 903 331 32 56</div>
+                <a class="contact-block__mail" href="#">i.ryabikov@ulregion.com</a>
+            </div>
+            <div class="contact-block-center">
+                <img class="contact-block__photo" src="/img/contact-photo.png" alt="">
+                <img class="contact-block__photo place-contact__photo--active" src="/img/place-contact-active.png" alt="">
+            </div>
+            <div class="contact-block-right">
+                <div class="contact-block__text">Полное ведение проекта до стадии принятия решения (консультации по вопросам предварительных технических заданий, информационная поддержка), Организация визитов делегаций. </div>
+            </div>
+        <a href="#order" class="contact-order open_modal">Заказать звонок</a>
+    </div>
+    <div class="contact-block clearfix">
+            <div class="contact-block-center">
+                <img class="contact-block__photo" src="/img/contact-photo-2.png" alt="">
+                <img class="contact-block__photo place-contact__photo--active" src="/img/place-contact-active.png" alt="">
+            </div>
+            <div class="contact-block-right">
+                <div class="contact-block__text">Полное ведение проекта до стадии принятия решения (консультации по вопросам предварительных технических заданий, информационная поддержка), Организация визитов делегаций. </div>
+            </div>
+            <div class="contact-block-left">
+                <div class="contact-block__name">Игорь Владимирович Рябиков</div>
+                <div class="contact-block__text">Первый заместитель генерального директора</div>
+                <div class="contact-block__phone">+7 (8422)<span> 741-15-67</span></div>
+                <div class="contact-block__phone">+7 903 331 32 56</div>
+                <a class="contact-block__mail" href="#">i.ryabikov@ulregion.com</a>
+            </div>
+            <a href="#order" class="contact-order open_modal">Заказать звонок</a>
+    </div>
+    <div id="map">
+        
+    </div>
+</div>
