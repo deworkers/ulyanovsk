@@ -411,54 +411,31 @@ $(document).ready(function() {
                 responsive:  false
             });
                 
-            if ( $(window).width() > 1024 ) {
-                $('.place-one-slider').owlCarousel({
-                    loop:true,
-                    margin:10,
-                    nav:true,
-                    mouseDrag: true,
-                    touchDrag: true,
-                    navSpeed: 1000,
-                    dragEndSpeed: 1000,
-                    center:true,
-                    responsive:{
-                        0:{
-                            items:1,
-                        },
-                        768:{
-                            items:2
-                        },
-                    },
-                    navText: ['','']
-                });
-            } else {
-
-                setTimeout(function() {
-                    $('.place-one-slider').each(function() {
-                        getHeight = $(this).find('img').height();
-                        $(this).height(getHeight);
-                    });
-                    console.log(getHeight);
-                    $('.place-one-slider').cycle({
-                        fx:      'scrollHorz',
-                        timeout: 0,
-                    });
-                }, 100);
+            
+        var swiper = new Swiper('.place-one-slider', {
+            loop: true,
+            centeredSlides: true,
+            paginationClickable: true,
+            slidesPerView: 2,
+            spaceBetween: 10,
+            breakpoints: {
+                760: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                }
             }
-
+        });
 
 
 
         $('.place-one__close, .news-one__close').on('click',function() {
 
             $('.place-overlay').fadeOut();
-            //$('.news-detail-one').fadeOut();
             $('body').removeClass('no-scroll');
-            if ( $(window).width > 768 ) {
-                
-            } else {
-                $('.place-one-slider').cycle('destroy');
-            }
         });
     });
 
