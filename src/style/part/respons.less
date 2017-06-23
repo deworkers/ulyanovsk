@@ -499,26 +499,47 @@
         }
     }
 
+}
+
+@media screen and (max-height: 840px) {
+    .map-mark--8 {
+        left: 62%;
+    }
+
+    .map-mark--3 {
+        top: 31%;
+    }
+
+
+}
+
+@media screen and (max-height: 750px) {
     .map-mark {
         &:after {
             transform: scale(0.8);
         }
     }
 
+    .map-mark--4 {
+        top: 23%;
+        left: 24%;
+    }
+
     .map-mark--3 {
+        top: 33%;
         &:after {
-            top: -7px;
-            right: -38px;
+            top: -31px;
+            right: -32px;
         }
     }
 
     .map-mark--8 {
-        top: 29%;
-        left: 59%;
+        top: 30%;
+        left: 57%;
 
         &:after {
             top: -41px;
-            right: 63px;
+            right: 49px;
         }
     }
 
@@ -547,6 +568,7 @@
             
         }
     }
+    
 }
 
 @media screen and (max-height: 650px) {
@@ -562,6 +584,10 @@
     .map-mark--3 {
         top: 34%;
         left: 36%;
+        &:after {
+            top: -41px;
+            right: 8px;
+        }
     }
 
     .map-mark--5 {
@@ -570,8 +596,12 @@
     }
 
     .map-mark--8 {
-        top: 29%;
+        top: 30%;
         left: 59%;
+        &:after {
+            top: -42px;
+            right: 69px;
+        }
     }
 
     .map-mark--6 {
