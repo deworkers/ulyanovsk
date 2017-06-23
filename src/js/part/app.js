@@ -515,13 +515,15 @@ $(document).ready(function() {
         return false;
     });
 
-    $('.content-slider-fact').click(function() {
-        if (  ! $(this).hasClass('active') ) {
-            $(this).addClass('active')
-            .find('.content-slider-fact__text').slideDown();
-        } else {
-            $(this).removeClass('active')
-            .find('.content-slider-fact__text').slideUp();
+    $('.content-slider-fact').click(function(event) {
+        if ( !$(event.target).hasClass('content-slider-fact__file')) {
+            if (  ! $(this).hasClass('active') ) {
+                $(this).addClass('active')
+                .find('.content-slider-fact__text').slideDown();
+            } else {
+                $(this).removeClass('active')
+                .find('.content-slider-fact__text').slideUp();
+            }
         }
     });
 
