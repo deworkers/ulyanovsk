@@ -1,5 +1,5 @@
 //= canvas.js
-
+var closeModal;
 
 $(document).ready(function() {
 
@@ -373,10 +373,16 @@ $(document).ready(function() {
     });
 
     close.click(function() {
+        closeModal();
+    });
+
+    closeModal = function() {
         modal.fadeOut(200);
         overlay.fadeOut(200);
         $('body').removeClass('no-scroll');
-    });
+    }
+
+
 
     overlay.click(function(event) {
         if ( $( event.target ).attr('id') == 'overlay' ) {
